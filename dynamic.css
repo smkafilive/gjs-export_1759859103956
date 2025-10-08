@@ -1,0 +1,25 @@
+/* Theme and motion enhancements */
+html[data-theme="light"]{--bg:#0a0f1a;--panel:rgba(255,255,255,0.06);--text:#e6eef8;--muted:#a8b3c7;--brand:#7c3aed;--brand-2:#06b6d4;}
+html[data-theme="dark"]{--bg:#010409;--panel:rgba(255,255,255,0.05);--text:#e6edf3;--muted:#9da7b3;--brand:#22c55e;--brand-2:#06b6d4;}
+html{background:var(--bg,#010409);color:var(--text,#e6edf3);}body{transition:background-color .3s ease,color .3s ease;}
+.utility-bar{backdrop-filter:blur(6px);} 
+
+/* Reveal animations */
+[data-reveal]{opacity:0;transform:translateY(16px) scale(.98);transition:opacity .6s ease,transform .6s ease;}
+[data-reveal].is-visible{opacity:1;transform:none;}
+
+/* Parallax helper */
+[data-parallax]{will-change:transform;}
+
+/* Background particles canvas */
+#bg-particles{position:fixed;inset:0;z-index:-1;display:block;background:radial-gradient(1200px 600px at 20% -10%, rgba(124,58,237,.25), transparent 60%),radial-gradient(1200px 800px at 120% 10%, rgba(6,182,212,.2), transparent 60%),linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0) 40%);} 
+
+/* Fancy buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 20px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#0b1020;text-decoration:none;border:none;box-shadow:0 10px 30px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.25);transition:transform .15s ease, box-shadow .2s ease;}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.3);} 
+.btn:active{transform:translateY(0);} 
+
+/* Card glass effect */
+.glass{background:var(--panel);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.08);box-shadow:0 8px 30px rgba(0,0,0,.25);border-radius:16px}
+
+
